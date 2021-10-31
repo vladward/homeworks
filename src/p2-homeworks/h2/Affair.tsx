@@ -8,14 +8,10 @@ type AffairPropsType = {
 }
 
 function Affair(props: AffairPropsType) {
-    let clsName = ''
-    if (props.affair.priority === 'middle') {
-        clsName = s.middle
-    } else if (props.affair.priority === 'high') {
-        clsName = s.high
-    } else {
-        clsName = s.low
-    }
+    let priority = props.affair.priority
+    let clsName = s[priority]
+    /* or let clsName = s[props.affair.priority] */
+
     const deleteCallback = () => {
         props.deleteAffairCallback(props.affair._id)
     }
