@@ -1,0 +1,21 @@
+.affair {
+    max-width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.low {
+    font-weight: 400;
+    color: cadetblue;
+}
+
+.high {
+    font-weight: 900;
+    color: red;
+}
+
+.middle {
+    font-weight: 700;
+    color: green;
+}
