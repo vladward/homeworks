@@ -32,8 +32,8 @@ export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): a
         return affairs
     }
 }
-export const deleteAffair = (affairs: any, _id: any): any => { // need to fix any
-    return // need to fix
+export const deleteAffair = (affairs: Array<AffairType>, _id: string): any => { // need to fix any
+    return affairs.filter( a => a._id !== _id )
 }
 
 function HW2() {
