@@ -1,8 +1,9 @@
 .affair {
-    max-width: 300px;
+    max-width: 350px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 .low {

@@ -1,6 +1,7 @@
 import React from 'react'
 import Affair from './Affair'
 import {AffairType, FilterType} from './HW2'
+import s from './Affairs.module.css'
 
 type AffairsPropsType = { // need to fix any
     data: any
@@ -24,13 +25,15 @@ function Affairs(props: AffairsPropsType) {
 
     return (
         <div>
-
             {mappedAffairs}
+            <div className={s.someClass}>
 
-            <button onClick={setAll}>All</button>
-            <button onClick={setHigh}>High</button>
-            <button onClick={setMiddle}>Middle</button>
-            <button onClick={setLow}>Low</button>
+
+                <button onClick={setAll}>All</button>
+                <button onClick={setHigh}>High</button>
+                <button onClick={setMiddle}>Middle</button>
+                <button onClick={setLow}>Low</button>
+            </div>
         </div>
     )
 }
