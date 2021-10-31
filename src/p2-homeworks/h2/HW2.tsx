@@ -10,7 +10,7 @@ export type AffairType = {
 }
 export type FilterType = 'all' | AffairPriorityType
 
-const defaultAffairs: Array<AffairType> = [
+const defaultAffairs: Array<AffairType> /* or Affairs[] */ = [
     {_id: v1(), name: 'React', priority: 'high'},
     {_id: v1(), name: 'anime', priority: 'low'},
     {_id: v1(), name: 'games', priority: 'low'},
@@ -18,18 +18,11 @@ const defaultAffairs: Array<AffairType> = [
     {_id: v1(), name: 'html & css', priority: 'middle'},
 ]
 
-export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): any => {
-    if (filter === 'high') {
-        return affairs.filter(a => a.priority === 'high')
-    } else if (filter === 'low') {
-        return affairs.filter(a => a.priority === 'low')
-    } else if (filter === 'middle') {
-        return affairs.filter(a => a.priority === 'middle')
-    } else {
-        return affairs
-    }
+export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): AffairType[] => {
+    if(filter === 'all') return affairs
+    else return affairs.filter(a => a.priority === filter)
 }
-export const deleteAffair = (affairs: Array<AffairType>, _id: string): any => {
+export const deleteAffair = (affairs: Array<AffairType>, _id: string): AffairType[] => {
     return affairs.filter(a => a._id !== _id)
 }
 
