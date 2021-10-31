@@ -41,7 +41,7 @@ function HW2() {
     const [filter, setFilter] = useState<FilterType>('all')
 
     const filteredAffairs = filterAffairs(affairs, filter)
-    const deleteAffairCallback = (_id: any) => setAffairs(deleteAffair(affairs, _id)) // need to fix any
+    const deleteAffairCallback = (_id: string) => setAffairs(deleteAffair(affairs, _id)) // need to fix any
 
     const changeFilter = (filter: FilterType ) => {
         setFilter(filter)
