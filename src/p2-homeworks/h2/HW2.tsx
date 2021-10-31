@@ -43,6 +43,10 @@ function HW2() {
     const filteredAffairs = filterAffairs(affairs, filter)
     const deleteAffairCallback = (_id: any) => setAffairs(deleteAffair(affairs, _id)) // need to fix any
 
+    const changeFilter = (filter: FilterType ) => {
+        setFilter(filter)
+    }
+
     return (
         <div>
             <hr/>
@@ -51,7 +55,7 @@ function HW2() {
             {/*should work (должно работать)*/}
             <Affairs
                 data={filteredAffairs}
-                setFilter={setFilter}
+                changeFilter={changeFilter}
                 deleteAffairCallback={deleteAffairCallback}
             />
 
