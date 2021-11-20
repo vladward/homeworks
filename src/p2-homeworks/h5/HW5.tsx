@@ -6,7 +6,6 @@ import MyRoutes from './MyRoutes'
 function HW5() {
     return (
         <div>
-            {/*в gh-pages лучше работает HashRouter*/}
 
             <Header/>
 
