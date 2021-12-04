@@ -1,0 +1,18 @@
+.wrapper {
+    width: 300px;
+
+}
+
+.main {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
