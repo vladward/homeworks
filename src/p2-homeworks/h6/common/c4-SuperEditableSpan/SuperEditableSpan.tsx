@@ -56,6 +56,7 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
                         autoFocus // пропсу с булевым значением не обязательно указывать true
                         onBlur={onBlurCallback}
                         onEnter={onEnterCallback}
+                        style={{border: "1px solid rosybrown", color: "rosybrown"}}
 
                         {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
                     />
@@ -63,6 +64,7 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
                     <span
                         onDoubleClick={onDoubleClickCallBack}
                         className={spanClassName}
+                        style={{color: "rosybrown"}}
 
                         {...restSpanProps}
                     >
