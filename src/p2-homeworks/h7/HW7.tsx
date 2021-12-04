@@ -15,6 +15,7 @@ function HW7() {
             {/*should work (должно работать)*/}
             <div>
                 <SuperSelect
+                    style={{width: "85px", height: "30px", color: "rosybrown", backgroundColor: "bisque"}}
                     options={arr}
                     value={value}
                     onChangeOption={onChangeOption}
