@@ -88,3 +88,44 @@
     text-decoration: none;
     border-radius: 3px;
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container_date {
+    width: 185px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    position: relative;
+}
+
+.button_box_button {
+    margin-top: 50px;
+}
+
+.button_box button {
+    margin: 2px;
+    border-radius: 10px;
+    border: none;
+}
+
+.container_time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid red;
+    border-radius: 10px;
+    background-color: #8c959d;
+}
+
