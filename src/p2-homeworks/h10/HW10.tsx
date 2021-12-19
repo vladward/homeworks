@@ -1,25 +1,33 @@
 import React from 'react'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import {useDispatch, useSelector} from "react-redux";
+import {LoadingAC} from "./bll/loadingReducer";
+import {rootReducerType} from "../h8/bll/store";
+import s from './style.module.css'
+import image from './assets/Circle-Loading.svg'
+
+export type IsLoadingType = {
+    isLoading: boolean
+}
 
 function HW10() {
-    // useSelector, useDispatch
-    const loading = false
+    const isLoading = useSelector<rootReducerType, boolean>(state => state.loading.isLoading)
+    let dispatch = useDispatch()
 
     const setLoading = () => {
-        // dispatch
-        // setTimeout
-        console.log('loading...')
-    };
+        dispatch(LoadingAC(true))
+        setTimeout(() => dispatch(LoadingAC(false)), 2000)
+    }
 
+    console.log(isLoading)
     return (
         <div>
             <hr/>
             homeworks 10
 
-            {/*should work (должно работать)*/}
-            {loading
+            {isLoading
                 ? (
-                    <div>крутилка...</div>
+                    <div><img className={s.rot} src={image} alt="loader"/></div>
                 ) : (
                     <div>
                         <SuperButton onClick={setLoading}>set loading...</SuperButton>
