@@ -1,9 +1,11 @@
 import {combineReducers, createStore} from "redux";
 import {homeWorkReducer} from "./homeWorkReducer";
+import {loadingReducer} from "../../h10/bll/loadingReducer";
 
 let rootReducer = combineReducers({
-    users: homeWorkReducer
+    users: homeWorkReducer,
+    loading: loadingReducer,
 })
 
 export type rootReducerType = ReturnType<typeof rootReducer>
-export let store = createStore(rootReducer)
+export const store = createStore(rootReducer)
