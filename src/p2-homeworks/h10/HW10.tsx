@@ -3,7 +3,6 @@ import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
 import {useDispatch, useSelector} from "react-redux";
 import {LoadingAC} from "./bll/loadingReducer";
 import {rootReducerType} from "../h8/bll/store";
-import s from './style.module.css'
 import image from './assets/Circle-Loading.svg'
 
 export type IsLoadingType = {
@@ -27,7 +26,7 @@ function HW10() {
 
             {isLoading
                 ? (
-                    <div><img className={s.rot} src={image} alt="loader"/></div>
+                    <div><img src={image} alt="loader"/></div>
                 ) : (
                     <div>
                         <SuperButton onClick={setLoading}>set loading...</SuperButton>
@@ -36,8 +35,6 @@ function HW10() {
             }
 
             <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<Alternative/>*/}
             <hr/>
         </div>
     )
