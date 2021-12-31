@@ -20,10 +20,10 @@ function HW12() {
             <span className={s[theme + '-text']}>
                 homeworks 12
             </span>
-
-            {/*should work (должно работать)*/}
-            {/*SuperSelect or SuperRadio*/}
-
+            <SuperSelect options={themes}
+                         value={theme.colorTheme}
+                         onChangeOption={onChangeCallBack}
+            />
             <hr/>
         </div>
     );
