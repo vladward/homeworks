@@ -1,36 +1,34 @@
 import React, {useState} from 'react'
 import SuperRange from './common/c7-SuperRange/SuperRange'
 import SuperDoubleRange from './common/c8-SuperDoubleRange/SuperDoubleRange'
+import {Typography} from "@material-ui/core";
 
 function HW11() {
-    const [value1, setValue1] = useState(0)
-    const [value2, setValue2] = useState(100)
-
+    // const [value1, setValue1] = useState(0)
+    const [value2, setValue2] = useState<number[]>([0, 100])
     return (
         <div>
             <hr/>
             homeworks 11
 
-            {/*should work (должно работать)*/}
             <div>
-                <span>{value1}</span>
+                <p>{value2[0]}</p>
                 <SuperRange
-                    // сделать так чтоб value1 изменялось
+                    onChangeRange={(newValue) => setValue2(newValue)}
+                    value={[value2[0]]}
                 />
             </div>
 
             <div>
-                <span>{value1}</span>
+                <p>{value2[0]}</p>
                 <SuperDoubleRange
-                    // сделать так чтоб value1 и value2 изменялось
+                    onChangeRange={(newValue) => setValue2(newValue)}
+                    value={value2}
                 />
-                <span>{value2}</span>
+                <p>{value2[1]}</p>
             </div>
 
             <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeSuperRange/>*/}
-            {/*<AlternativeSuperDoubleRange/>*/}
             <hr/>
         </div>
     )
