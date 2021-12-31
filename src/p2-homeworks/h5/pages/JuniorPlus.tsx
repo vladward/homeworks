@@ -1,7 +1,8 @@
+import HW12 from "../../h12/HW12";
 
 
 export const JuniorPlus = () => {
     return <div>
-        <h1>JuniorPlus page in development</h1>
+        <HW12/>
     </div>
 }
