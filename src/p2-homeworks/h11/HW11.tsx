@@ -24,6 +24,8 @@ function HW11() {
                 <SuperDoubleRange
                     onChangeRange={(newValue) => setValue2(newValue)}
                     value={value2}
+                    max={100}
+                    min={0}
                 />
                 <p>{value2[1]}</p>
             </div>
