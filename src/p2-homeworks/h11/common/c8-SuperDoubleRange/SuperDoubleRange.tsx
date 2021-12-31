@@ -4,11 +4,13 @@ import {Slider, Typography} from "@material-ui/core";
 type SuperDoubleRangePropsType = {
     onChangeRange?: (value: number[]) => void
     value?: number[]
+    max: number
+    min: number
 }
 
 const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
     {
-        onChangeRange, value, ...restProps
+        onChangeRange, value, max, min
     }
 ) => {
     const onChangeCallback = (e: ChangeEvent<{}>, newValue: number | number[]) => {
@@ -25,14 +27,11 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
     return (
         <>
             {value !== null && <div>
-                <Typography id="range-slider" gutterBottom>
-                     range
-                </Typography>
                 <Slider
                     style={{width: '250px'}}
                     value={value}
-                    min={0}
-                    max={100}
+                    min={min}
+                    max={max}
                     step={1}
                     // scale={x => x ** 10}
                     onChange={onChangeCallback}
