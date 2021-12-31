@@ -15,9 +15,9 @@ function HW12() {
     }
     console.log(theme.colorTheme + '-text')
     return (
-        <div className={s[theme]}>
+        <div className={s[theme.colorTheme]}>
             <hr/>
-            <span className={s[theme + '-text']}>
+            <span className={s[theme.colorTheme + '-text']}>
                 homeworks 12
             </span>
             <SuperSelect options={themes}

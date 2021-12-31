@@ -4,6 +4,7 @@
 
 .dark-text {
     color: aliceblue;
+    font-weight: bold;
 }
 
 .red {
@@ -12,6 +13,7 @@
 
 .red-text {
     color: aqua;
+    font-weight: bold;
 }
 
 .some {
@@ -20,4 +22,5 @@
 
 .some-text {
     color: darkslateblue;
+    font-weight: bold;
 }
